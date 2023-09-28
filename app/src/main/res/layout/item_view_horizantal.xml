@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="8dp"
+        android:src="@drawable/news_images"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4E4B66"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:text="@string/country_text"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_img"/>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="8dp"
+        android:text="Russian warship: Moskva sinks in Black Sea"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_country"/>
+
+    <ImageView
+        android:id="@+id/iv_chanelIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/news_author"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"/>
+
+    <TextView
+        android:id="@+id/tv_chanelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="BBC News"
+        android:textStyle="bold"
+        android:textColor="#4E4B66"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_chanelIcon"
+        app:layout_constraintTop_toTopOf="@id/iv_chanelIcon"/>
+
+    <ImageView
+        android:id="@+id/iv_timeClock"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/baseline_access_time"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_chanelName"
+        app:layout_constraintStart_toEndOf="@id/tv_chanelName"
+        app:layout_constraintTop_toTopOf="@id/tv_chanelName"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="14m ago"
+        android:textColor="#4E4B66"
+        app:layout_constraintBottom_toBottomOf="@id/iv_timeClock"
+        app:layout_constraintStart_toEndOf="@id/iv_timeClock"
+        app:layout_constraintTop_toTopOf="@id/iv_timeClock"/>
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/baseline_more_horiz"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_chanelName"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

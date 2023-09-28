@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/iv_author"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/news_author"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_authorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BBC News"
+        android:textSize="16dp"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintBottom_toTopOf="@id/tv_followCount"
+        app:layout_constraintStart_toEndOf="@id/iv_author"
+        app:layout_constraintTop_toTopOf="@id/iv_author"/>
+
+    <TextView
+        android:id="@+id/tv_followCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.2M"
+        android:textSize="14dp"
+        android:textColor="#4E4B66"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintBottom_toBottomOf="@id/iv_author"
+        app:layout_constraintStart_toStartOf="@id/tv_authorName"
+        app:layout_constraintTop_toBottomOf="@id/tv_authorName"/>
+
+    <TextView
+        android:id="@+id/tv_followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Followers"
+        android:textSize="14dp"
+        android:layout_marginStart="4dp"
+        android:textColor="#4E4B66"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintStart_toEndOf="@id/tv_followCount"
+        app:layout_constraintBottom_toBottomOf="@id/tv_followCount"
+        app:layout_constraintTop_toTopOf="@id/tv_followCount"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:text="Follow"
+        android:drawableStart="@drawable/plus"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        android:textColor="@color/blue"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:paddingHorizontal="8dp"
+        android:background="@drawable/shape_btn_background_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
